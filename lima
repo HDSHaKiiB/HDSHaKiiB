@@ -1,0 +1,17 @@
+import requests
+from requests.structures import CaseInsensitiveDict
+
+
+number  = "01889105341"
+
+sms = str(input("[>] Sir.... apNar SmS TypE KoruN : "))
+
+url = "http://188.166.227.8:8809/smsapi?api_key=C20070005f619f9b4a5a13.57431467&type=text&contacts=88"+number+"&senderid=8801844502224&msg="+sms
+
+headers = CaseInsensitiveDict()
+headers["Content-Type"] = "application/x-www-form-urlencoded"
+headers["Content-Length"] = "0"
+
+resp = requests.post(url, headers=headers)
+
+print(resp.status_code)
